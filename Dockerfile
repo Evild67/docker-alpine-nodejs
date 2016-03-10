@@ -1,7 +1,7 @@
 FROM evild/alpine-base:1.0.0
 MAINTAINER Dominique HAAS <contact@dominique-haas.fr>
 
-ENV NODE_VERSION=v5.7.1
+ENV NODE_VERSION=v5.8.0
 
 RUN apk --no-cache add git curl make gcc g++ python linux-headers libgcc libstdc++ binutils-gold \
     && curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz \

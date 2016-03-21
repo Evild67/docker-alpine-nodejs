@@ -19,7 +19,7 @@ RUN \
       ; do \
         gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
       done \
-    && curl -SLO https://nodejs.org/dist/${NODE_VERSION}/node-v${NODE_VERSION}.tar.xz\
+    && curl -SLO https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.xz\
     && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
     && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc \
     && grep " node-v$NODE_VERSION-linux-x64.tar.xz\$" SHASUMS256.txt | sha256sum -c - \

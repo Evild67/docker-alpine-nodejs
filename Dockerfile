@@ -5,7 +5,7 @@ ENV NODE_VERSION=5.9.0
 
 RUN \
     build_pkgs="git curl make gcc g++ python linux-headers libgcc libstdc++ binutils-gold xz gnupg" \
-    && apk --no-cache add {build_pkgs}  \
+    && apk --no-cache add ${build_pkgs}  \
     &&  set -ex \
       && for key in \
         9554F04D7259F04124DE6B476D5A82AC7E37093B \
@@ -27,7 +27,7 @@ RUN \
     && ./configure --prefix=/usr --without-snapshot --fully-static \
     && make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
     && make install \
-    && apk del {build_pkgs} \
+    && apk del ${build_pkgs} \
     && rm -rf /etc/ssl /node-v${NODE_VERSION}.tar.xz /usr/include \
     /usr/share/man /tmp/* /var/cache/apk/* /root/.npm /root/.node-gyp \
     /usr/lib/node_modules/npm/man /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/html

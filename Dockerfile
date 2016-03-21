@@ -23,12 +23,12 @@ RUN \
     && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
     && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc \
     && grep " node-v$NODE_VERSION.tar.xz\$" SHASUMS256.txt | sha256sum -c - \
-    && tar -xJf "node-v$NODE_VERSION.tar.xz" -C /node \
-    && cd /node/v$NODE_VERSION \
+    && tar -xJf "node-v$NODE_VERSION.tar.xz" \
+    && cd /node-v${NODE_VERSION} \
     && ./configure --prefix=/usr --without-snapshot --fully-static \
     && make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
     && make install \
     && apk del ${build_pkgs} \
-    && rm -rf /etc/ssl /node /usr/include \
+    && rm -rf /etc/ssl /node-v${NODE_VERSION} /usr/include \
     /usr/share/man /tmp/* /var/cache/apk/* /root/.npm /root/.node-gyp \
     /usr/lib/node_modules/npm/man /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/html

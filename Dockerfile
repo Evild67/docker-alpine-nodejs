@@ -23,7 +23,8 @@ RUN \
     && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
     && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc \
     && grep " node-v$NODE_VERSION.tar.xz\$" SHASUMS256.txt | sha256sum -c - \
-    && tar -xJf "node-v$NODE_VERSION.tar.xz" -C /node --strip-components=1 \
+    && tar -xJf "node-v$NODE_VERSION.tar.xz" -C /node \
+    && cd /node/v$NODE_VERSION \
     && ./configure --prefix=/usr --without-snapshot --fully-static \
     && make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
     && make install \

@@ -7,7 +7,8 @@
 This image is based on [evild/alpine-base](https://hub.docker.com/r/evild/alpine-base/)
 
 ## Version
-- `5.9.1`, `latest` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/master/Dockerfile)
+- `5.10.0`, `latest` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/master/Dockerfile)
+- `5.9.1` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/8b4e594ba10e2cf87e3d2087199e39c5fccc74e3/Dockerfile)
 - `5.9.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/fb829f7061bdb86d854aff13bc6991331bf94dec/Dockerfile)
 - `5.8.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/5172a8c1573de21fcb07bbf7afdad0cb8c8d695a/Dockerfile)
 - `5.7.1` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/c49fa818418aa201c1cc60a5b48d7c117a42503a/Dockerfile)

@@ -1,7 +1,7 @@
 FROM evild/alpine-base:1.0.0
 MAINTAINER Dominique HAAS <contact@dominique-haas.fr>
 
-ENV NODE_VERSION=5.9.1
+ENV NODE_VERSION=5.10.0
 
 RUN \
     build_pkgs="git curl make gcc g++ python linux-headers libgcc libstdc++ binutils-gold xz gnupg" \

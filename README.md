@@ -16,8 +16,8 @@ This image is based on [evild/alpine-base](https://hub.docker.com/r/evild/alpine
 - `5.6.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/5896ec1da4bb86c5f492242cbdfa7b12af89ab4a/Dockerfile)
 - `5.5.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/522ec455133f03a6a85c742bfee3755f45053392/Dockerfile)
 
-- `exemple`
-[(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/master/exemple/Dockerfile)
+- `example`
+[(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/master/example/Dockerfile)
 
 ## How to use this image
 

@@ -1,4 +1,4 @@
-FROM evild/alpine-nodejs:5.7.1
+FROM evild/alpine-nodejs:latest
 
 MAINTAINER DOMINIQUE HAAS <contact@dominique-haas.fr>
 

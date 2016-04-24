@@ -1,5 +1,6 @@
 stages:
   - build
+  - build_test
   - test
   - cleanup
   - deploy
@@ -9,6 +10,11 @@ build_job:
   stage: build
   script:
     - ci/nodejs_build
+
+build_test_job:
+  stage: build_test
+  script:
+    - ci/nodejs_build_test_image
 
 test_job:
   stage: test

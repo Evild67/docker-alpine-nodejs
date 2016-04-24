@@ -1,0 +1,27 @@
+stages:
+  - build
+  - test
+  - cleanup
+  - deploy
+
+
+build_job:
+  stage: build
+  script:
+    - ci/nodejs_build
+
+test_job:
+  stage: test
+  script:
+    - ci/nodejs_test
+
+cleanup:
+  stage: cleanup
+  script:
+    - ci/nodejs_cleanup
+  when: always
+
+deploy_job:
+  stage: deploy
+  script:
+    - ci/nodejs_deploy

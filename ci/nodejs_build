@@ -5,7 +5,7 @@ set -e
 docker --version
 
 if [ "$NIGHTLY_BUILD" ]; then
-
+  :
 
 else
 

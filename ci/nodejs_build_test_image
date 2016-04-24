@@ -6,7 +6,7 @@ docker --version
 
 if [ "$NIGHTLY_BUILD" ]; then
 
-
+ :
 else
 
 docker build -t evild/alpine-nodejs:stable_test ci/test_image/stable

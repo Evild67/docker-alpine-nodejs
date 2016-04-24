@@ -6,7 +6,6 @@ docker --version
 
 if [ "$NIGHTLY_BUILD" ]; then
   :
-
 else
 
 docker build -t evild/alpine-nodejs:stable stable

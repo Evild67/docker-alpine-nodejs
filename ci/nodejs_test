@@ -6,11 +6,11 @@ if [ "$NIGHTLY_BUILD" ]; then
   :
 else
 
-  docker run -p 5000:80 -d --name nodejs-test-lts evild/alpine-nodejs:lts_test
-  docker ps | grep nginx-mainline-openssl
+  docker run -d --name nodejs-test-lts evild/alpine-nodejs:lts_test
+  docker ps | grep nodejs-test-lts
 
 
-  docker run -p 5001:80 -d --name nodejs-test-stable evild/alpine-nodejs:stable_test
+  docker run -d --name nodejs-test-stable evild/alpine-nodejs:stable_test
   docker ps | grep nodejs-test-stable
 
 fi

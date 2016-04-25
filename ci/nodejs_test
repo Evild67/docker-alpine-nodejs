@@ -7,10 +7,22 @@ if [ "$NIGHTLY_BUILD" ]; then
 else
 
   docker run -d --name nodejs-test-lts evild/alpine-nodejs:lts_test
+  sleep 5
   docker ps | grep nodejs-test-lts
-
+  if docker ps | grep -q nodejs-test-lts then
+      echo Docker found
+  else
+      exit
+  fi
 
   docker run -d --name nodejs-test-stable evild/alpine-nodejs:stable_test
-  docker ps | grep nodejs-test-stable
+  sleep 5
+
+if docker ps | grep -q nodejs-test-stable then
+    echo Docker found
+else
+    exit
+fi
+
 
 fi

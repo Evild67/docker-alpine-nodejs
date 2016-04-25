@@ -11,6 +11,11 @@ else
 
   if docker ps | grep -q nodejs-test-lts; then
       echo Docker nodejs-test-lts found
+      if docker logs nodejs-test-lts | awk 'END{print}' | grep -q 'Hello World :)'; then
+        echo Hello World found
+      else
+        exit
+      fi
   else
       echo Docker nodejs-test-lts not found
       exit
@@ -21,6 +26,11 @@ else
 
   if docker ps | grep -q nodejs-test-stable; then
       echo Docker nodejs-test-stable found
+      if docker logs nodejs-test-stable | awk 'END{print}' | grep -q 'Hello World :)'; then
+        echo Hello World found
+      else
+        exit
+      fi
   else
       echo Docker nodejs-test-stable not found
       exit

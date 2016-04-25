@@ -10,17 +10,19 @@ else
   sleep 5
 
   if docker ps | grep -q nodejs-test-lts; then
-      echo Docker found
+      echo Docker nodejs-test-lts found
   else
+      echo Docker nodejs-test-lts not found
       exit
   fi
 
   docker run -d --name nodejs-test-stable evild/alpine-nodejs:stable_test
   sleep 5
 
-  if docker ps | grep -q nodejs-test-stablez; then
-      echo Docker found
+  if docker ps | grep -q nodejs-test-stable; then
+      echo Docker nodejs-test-stable found
   else
+      echo Docker nodejs-test-stable not found
       exit
   fi
 fi

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+docker --version
+
+if [ "$NIGHTLY_BUILD" ]; then
+ :
+else
+
+docker build -t evild/alpine-nodejs:stable_test ci/test_image/stable
+docker inspect evild/alpine-nodejs:stable_test
+
+docker build -t evild/alpine-nodejs:lts_test ci/test_image/lts
+docker inspect evild/alpine-nodejs:lts_test
+
+fi

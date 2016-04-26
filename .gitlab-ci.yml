@@ -30,11 +30,19 @@ cleanup:
 
 tweet_job:
   stage: tweet
+  only:
+    - tags
+    - triggers
+    - master
   script:
     - ci/nodejs_tweet
 
 deploy_job:
   stage: deploy
+  only:
+    - tags
+    - triggers
+    - master
   script:
     - ci/nodejs_deploy
 

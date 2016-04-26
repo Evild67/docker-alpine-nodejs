@@ -4,6 +4,7 @@ stages:
   - test
   - cleanup
   - deploy
+  - tweet
 
 
 build_job:
@@ -31,3 +32,8 @@ deploy_job:
   stage: deploy
   script:
     - ci/nodejs_deploy
+
+tweet_job:
+  stage: tweet
+  script:
+    - ci/nodejs_tweet

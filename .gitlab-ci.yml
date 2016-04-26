@@ -3,6 +3,7 @@ stages:
   - build_test
   - test
   - cleanup
+  - tweet
   - deploy
 
 
@@ -27,7 +28,13 @@ cleanup:
     - ci/nodejs_cleanup
   when: always
 
+tweet_job:
+  stage: tweet
+  script:
+    - ci/nodejs_tweet
+
 deploy_job:
   stage: deploy
   script:
     - ci/nodejs_deploy
+

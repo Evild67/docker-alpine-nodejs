@@ -8,9 +8,14 @@ This image is based on [evild/alpine-base](https://hub.docker.com/r/evild/alpine
 
 ## Version
 
+### Current
+
+- `latest`, `current` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/master/current/Dockerfile)
+- `6.0.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/f2b99b4cf1d99a48b44fdd2011e26c9e352d6456/current/Dockerfile)
+
 ### Stable
-- `latest`, `stable` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/master/stable/Dockerfile)
-- `5.11.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/2083fc887f7755af8929316866253ec22093f73a/stable/Dockerfile) 
+
+- `5.11.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/2083fc887f7755af8929316866253ec22093f73a/stable/Dockerfile)
 - `5.10.1` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/44c593760d2605ff5e08c9fe163983da44acee04/Dockerfile)
 - `5.9.1` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/8b4e594ba10e2cf87e3d2087199e39c5fccc74e3/Dockerfile)
 - `5.9.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/fb829f7061bdb86d854aff13bc6991331bf94dec/Dockerfile)

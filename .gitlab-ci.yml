@@ -28,7 +28,9 @@ cleanup:
     - ci/nodejs_cleanup
   when: always
 
-tweet_job:
+tweet_succeed_job:
+  variables:
+    PASSED: "true"
   stage: tweet
   only:
     - tags
@@ -36,6 +38,18 @@ tweet_job:
     - master
   script:
     - ci/nodejs_tweet
+
+tweet_failed_job:
+  variables:
+    PASSED: "false"
+  stage: tweet
+  only:
+    - tags
+    - triggers
+    - master
+  script:
+    - ci/nodejs_tweet
+  when: on_failure
 
 deploy_job:
   stage: deploy
@@ -45,4 +59,3 @@ deploy_job:
     - master
   script:
     - ci/nodejs_deploy
-

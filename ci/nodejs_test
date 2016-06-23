@@ -2,11 +2,39 @@
 
 set -e
 
+
+
 if [ "$NIGHTLY_BUILD" ]; then
   :
 else
 
-  docker run -d --name nodejs-test-lts evild/alpine-nodejs:lts_test
+docker build -t evild/alpine-nodejs:current current
+docker inspect evild/alpine-nodejs:current
+
+docker build -t evild/alpine-nodejs:lts lts
+docker inspect evild/alpine-nodejs:lts
+
+fi
+
+if [ "$NIGHTLY_BUILD" ]; then
+ :
+else
+
+docker build -t evild/alpine-nodejs:current_test ci/test_image/current
+docker inspect evild/alpine-nodejs:current_test
+
+docker build -t evild/alpine-nodejs:lts_test ci/test_image/lts
+docker inspect evild/alpine-nodejs:lts_test
+
+fi
+
+
+
+if [ "$NIGHTLY_BUILD" ]; then
+  :
+else
+
+  docker run --rm -d --name nodejs-test-lts evild/alpine-nodejs:lts_test
   sleep 5
 
   if docker ps | grep -q nodejs-test-lts; then
@@ -14,14 +42,16 @@ else
       if docker logs nodejs-test-lts | awk 'END{print}' | grep -q 'Hello World :)'; then
         echo Hello World found
       else
+        docker rm nodejs-test-lts
         exit
       fi
   else
+      docker rm nodejs-test-lts
       echo Docker nodejs-test-lts not found
       exit
   fi
 
-  docker run -d --name nodejs-test-current evild/alpine-nodejs:current_test
+  docker run --rm -d --name nodejs-test-current evild/alpine-nodejs:current_test
   sleep 5
 
   if docker ps | grep -q nodejs-test-current; then
@@ -29,9 +59,11 @@ else
       if docker logs nodejs-test-current | awk 'END{print}' | grep -q 'Hello World :)'; then
         echo Hello World found
       else
+        docker rm nodejs-test-current
         exit
       fi
   else
+        docker rm nodejs-test-current
       echo Docker nodejs-test-current not found
       exit
   fi

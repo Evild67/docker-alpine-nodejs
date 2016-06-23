@@ -11,6 +11,7 @@ This image is based on [evild/alpine-base](https://hub.docker.com/r/evild/alpine
 ### Current
 
 - `latest`, `current` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/master/current/Dockerfile)
+- `6.2.1` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/27faa5f1a4b1eb49d2aca0f922b8fb0079d65bd7/current/Dockerfile)
 - `6.2.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/43728f9e4bb3bccbd4c57b0f572b34bdd27bad02/current/Dockerfile)
 - `6.1.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/f9fb9b48727655a9edad9262c72549049dd4190b/current/Dockerfile)
 - `6.0.0` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/f2b99b4cf1d99a48b44fdd2011e26c9e352d6456/current/Dockerfile)

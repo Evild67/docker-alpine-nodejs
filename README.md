@@ -39,6 +39,7 @@ This image is based on [evild/alpine-base](https://hub.docker.com/r/evild/alpine
 
 
 ## What is Node.js?
+
 Node.js is a software platform for scalable server-side and networking applications. Node.js applications are written in JavaScript and can be run within the Node.js runtime on Mac OS X, Windows, and Linux without changes.
 
 Node.js applications are designed to maximize throughput and efficiency, using non-blocking I/O and asynchronous events. Node.js applications run single-threaded, although Node.js uses multiple threads for file and network events. Node.js is commonly used for real-time applications due to its asynchronous nature.
@@ -55,10 +56,11 @@ You can also pull the latest tag which is built from the repository HEAD.
 docker pull evild/alpine-nodejs:latest
 ```
 
-`lts` & `stable` are also available.
+`current`, `stable` & `lts` are also available.
 ```
+docker pull evild/alpine-nodejs:current
+docker pull evild/alpine-nodejs:stable
 docker pull evild/alpine-nodejs:lts
-docker pull evild/alpine-nodejs:latest
 ```
 
 Alternatively you can build the image locally.
@@ -76,5 +78,16 @@ You can also do :
 docker run -name alpine-nodejs-app evild/alpine-nodejs:exemple
 ```
 
-### App dependencies instalation
+### App dependencies installation
 You need to add first your package.json and then npm install. Docker use his cache when the package.json isn't changed. The build will be faster.
+
+## Example
+
+`example` tag is available 
+```
+docker pull evild/alpine-nodejs:example
+```
+
+You can also checkout some projects build with this docker image :
+
+* [docker-alpine-mailtrian](https://github.com/Evild67/docker-alpine-mailtrain)

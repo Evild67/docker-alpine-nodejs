@@ -33,7 +33,8 @@ This image is based on [evild/alpine-base](https://hub.docker.com/r/evild/alpine
 ### LTS
 
 - `lts` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/master/lts/Dockerfile)
-- `4.4.4` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/2e709372e065c6886050a521231f384ac496187c/lts/Dockerfile)
+- `4.4.6` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/8f3bc986d192548bbc18bb3375c5d76a48740214/lts/Dockerfile)
+- `4.4.5` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/2e709372e065c6886050a521231f384ac496187c/lts/Dockerfile)
 - `4.4.4` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/534b9839516ba325565ce14130cf4eab5bcda5d3/lts/Dockerfile)
 - `4.4.3` [(Dockerfile)](https://github.com/Evild67/docker-alpine-nodejs/blob/996cc3ab123c73cc5cd7774e6cfe4a385cc979c9/lts/Dockerfile)
 

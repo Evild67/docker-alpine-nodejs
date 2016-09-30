@@ -1,6 +1,6 @@
 [![Docker Stars](https://img.shields.io/docker/stars/evild/alpine-nodejs.svg?style=flat-square)](https://hub.docker.com/r/evild/alpine-nodejs/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/evild/alpine-nodejs.svg?style=flat-square)](https://hub.docker.com/r/evild/alpine-nodejs/)
-[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/evild/alpine-nodejs/latest.svg?style=flat-square)](https://hub.docker.com/r/evild/alpine-nodejs/)
+[![](https://images.microbadger.com/badges/image/evild/alpine-nodejs.svg)](https://microbadger.com/images/evild/alpine-nodejs)
 
 # Alpine NodeJS
 
